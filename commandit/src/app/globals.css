@@ -1,0 +1,164 @@
+/* 
+Ajoutez ce code à votre fichier globals.css pour ajouter des animations
+et des styles supplémentaires à votre application
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Animation d'entrée pour les cartes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de transition pour les pages */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation de pulsation pour attirer l'attention */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+
+/* Classes personnalisées pour les boutons et composants */
+@layer components {
+  .card-animation {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .card-animation:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .card-animation:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .card-animation:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .card-animation:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .page-transition {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .button-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
+  }
+  
+  /* Améliorer l'apparence des tableaux */
+  .modern-table {
+    @apply w-full rounded-lg overflow-hidden shadow-sm;
+  }
+  
+  .modern-table th {
+    @apply p-3 text-left bg-gradient-to-r from-indigo-50 to-purple-50 text-gray-700 font-semibold;
+  }
+  
+  .modern-table td {
+    @apply p-3 border-t border-gray-100;
+  }
+  
+  .modern-table tr:hover {
+    @apply bg-indigo-50/50 transition-colors;
+  }
+  
+  /* Styles pour les formulaires */
+  .form-input-modern {
+    @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-colors;
+  }
+  
+  .form-label-modern {
+    @apply block mb-2 font-medium text-gray-700;
+  }
+}
+
+/* Personnalisation des scrollbars pour un look plus moderne */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Styles pour les boutons spéciaux */
+.btn-3d {
+  @apply relative transition-transform active:translate-y-1 active:shadow-inner;
+  box-shadow: 0 4px 0 rgb(79, 70, 229, 0.9);
+}
+
+.btn-3d:active {
+  box-shadow: 0 0 0 rgb(79, 70, 229, 0.9);
+}
+
+/* Effet de hover pour les cartes */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
