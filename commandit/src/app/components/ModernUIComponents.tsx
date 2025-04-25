@@ -150,28 +150,33 @@ export function ModernInput({ label, id, type = "text", value, onChange, require
   )
 }
 
-export default function ModernSelect({ label, id, options, value, onChange, required = false, disabled = false }) {
-  return (
-    <div className="mb-4">
-      {label && (
-        <label htmlFor={id} className="block mb-2 text-sm font-medium text-gray-700">
-          {label}
-        </label>
-      )}
-      <select
-        id={id}
-        value={value}
-        onChange={onChange}
-        required={required}
-        disabled={disabled}
-        className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-colors disabled:bg-gray-100 disabled:text-gray-500"
-      >
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </div>
-  )
-}
+// Composant de selection moderne
+export function ModernSelect({ 
+    label,
+    id, 
+    value, 
+    onChange, 
+    required = false, 
+    disabled = false, 
+    children 
+  }) {
+    return (
+      <div className="mb-4">
+        {label && (
+          <label htmlFor={id} className="block mb-2 text-sm font-medium text-gray-700">
+            {label}
+          </label>
+        )}
+        <select
+          id={id}
+          value={value}
+          onChange={onChange}
+          required={required}
+          disabled={disabled}
+          className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-colors disabled:bg-gray-100 disabled:text-gray-500"
+        >
+          {children}
+        </select>
+      </div>
+    )
+  }

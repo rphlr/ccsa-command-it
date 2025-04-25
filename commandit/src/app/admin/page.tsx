@@ -125,7 +125,7 @@ export default function AdminPage() {
           date: '2024-04-23T14:35:22', 
           status: 'pending',
           items: [
-            { name: 'Color Copy 80 g/m² A4', quantity: 5, unit: 'paquet(s)' },
+            { name: 'Color Copy 80 g/m² A4', quantity: 5, unit: 'carton(s)' },
             { name: 'Dos pinçant 3 mm', quantity: 10, unit: 'paquet(s)' }
           ]
         },
@@ -146,8 +146,8 @@ export default function AdminPage() {
           date: '2024-04-20T16:47:33', 
           status: 'completed',
           items: [
-            { name: 'Color Copy 160 g/m² A4', quantity: 2, unit: 'paquet(s)' },
-            { name: 'Color Copy 90 g/m² A3', quantity: 1, unit: 'paquet(s)' }
+            { name: 'Color Copy 160 g/m² A4', quantity: 2, unit: 'carton(s)' },
+            { name: 'Color Copy 90 g/m² A3', quantity: 1, unit: 'carton(s)' }
           ]
         },
         { 

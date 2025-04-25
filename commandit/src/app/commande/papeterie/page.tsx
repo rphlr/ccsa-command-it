@@ -16,13 +16,13 @@ export default function PapeteriePage() {
   const [notes, setNotes] = useState('')
   
   const [orderItems, setOrderItems] = useState([
-    { id: 1, name: 'Color Copy 80 g/m² A4', quantity: 0, unit: 'paquet(s)' },
-    { id: 2, name: 'Color Copy 160 g/m² A4', quantity: 0, unit: 'paquet(s)' },
-    { id: 3, name: 'Color Copy 250 g/m² A4', quantity: 0, unit: 'paquet(s)' },
-    { id: 4, name: 'Color Copy 90 g/m² A3', quantity: 0, unit: 'paquet(s)' },
-    { id: 5, name: 'Color Copy Glossy 250 g/m² A3', quantity: 0, unit: 'paquet(s)' },
-    { id: 6, name: 'Color Copy 250 g/m² A3', quantity: 0, unit: 'paquet(s)' },
-    { id: 7, name: 'Feuilles transparentes A3 Clear Binding Covers', quantity: 0, unit: 'paquet(s)' },
+    { id: 1, name: 'Color Copy 80 g/m² A4', quantity: 0, unit: 'carton(s)' },
+    { id: 2, name: 'Color Copy 160 g/m² A4', quantity: 0, unit: 'carton(s)' },
+    { id: 3, name: 'Color Copy 250 g/m² A4', quantity: 0, unit: 'carton(s)' },
+    { id: 4, name: 'Color Copy 90 g/m² A3', quantity: 0, unit: 'carton(s)' },
+    { id: 5, name: 'Color Copy Glossy 250 g/m² A3', quantity: 0, unit: 'carton(s)' },
+    { id: 6, name: 'Color Copy 250 g/m² A3', quantity: 0, unit: 'carton(s)' },
+    { id: 7, name: 'Feuilles transparentes A3 Clear Binding Covers', quantity: 0, unit: 'carton(s)' },
     { id: 8, name: 'Dos pinçant 3 mm', quantity: 0, unit: 'paquet(s)' },
     { id: 9, name: 'Dos pinçant 5 mm', quantity: 0, unit: 'paquet(s)' },
   ])
@@ -184,7 +184,7 @@ export default function PapeteriePage() {
                       </svg>
                       Envoi en cours...
                     </span>
-                  ) : 'Soumettre la commande'}
+                  ) : 'Soumettre la demande'}
                 </ModernButton>
               </div>
             </div>
